@@ -1,0 +1,11 @@
+QMainWindow {
+  background-color: #0d0b14;
+}
+
+#scroll_area, #content {
+    background-color: transparent;
+}
+
+QMessageBox QLabel {
+  color: #0D0B14;
+}

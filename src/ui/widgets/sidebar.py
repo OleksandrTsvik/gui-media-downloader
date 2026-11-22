@@ -9,8 +9,8 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from config import QIcons
 from models import NavItem
+from ui import QIcons
 
 
 class Sidebar(QFrame):

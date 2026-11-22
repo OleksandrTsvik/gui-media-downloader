@@ -6,13 +6,13 @@
 #sidebar__toggle-button {
     border: none;
     border-radius: 6px;
-    background-color: #332A42;
+    background-color: transparent;
     padding: 8px;
     font-size: 14px;
 }
 
 #sidebar__toggle-button:hover {
-    background-color: #71677F;
+    background-color: #332A42;
 }
 
 #sidebar__title {
@@ -24,6 +24,7 @@
 
 #sidebar__nav-button {
     border: none;
+    border-radius: none;
     background-color: transparent;
     padding: 12px 12px 12px 14px;
     color: #a49aaf;

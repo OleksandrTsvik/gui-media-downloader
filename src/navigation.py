@@ -1,11 +1,12 @@
-from config import QIcons
 from models import NavItem
-from ui.widgets import InstagramPage, YouTubePage
+from ui import QIcons
+from ui.pages import InstagramPage, VideoPage
 
 
 NAVIGATION_ITEMS = [
-    NavItem(qicon=QIcons.YOUTUBE, title="YouTube", page=YouTubePage),
+    NavItem(qicon=QIcons.VIDEO, title="Video", page=VideoPage),
+    NavItem(qicon=QIcons.MUSIC, title="Music", page=VideoPage),
+    NavItem(qicon=QIcons.YOUTUBE, title="YouTube", page=VideoPage),
     NavItem(qicon=QIcons.INSTAGRAM, title="Instagram", page=InstagramPage),
-    NavItem(qicon=QIcons.INSTAGRAM, title="History", page=InstagramPage),
-    NavItem(qicon=QIcons.INSTAGRAM, title="Settings", page=InstagramPage),
+    NavItem(qicon=QIcons.TIKTOK, title="TikTok", page=InstagramPage),
 ]

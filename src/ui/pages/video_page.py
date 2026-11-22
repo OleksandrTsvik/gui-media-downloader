@@ -1,6 +1,5 @@
 from pathlib import Path
 
-from PySide6.QtCore import Qt
 from PySide6.QtGui import QCloseEvent
 from PySide6.QtWidgets import (
     QComboBox,
@@ -13,13 +12,14 @@ from PySide6.QtWidgets import (
     QProgressBar,
     QPushButton,
     QVBoxLayout,
-    QWidget,
 )
 
 from downloaders.ydl_downloader import YdlDownloader
 
+from .base_page import BasePage
 
-class YouTubePage(QWidget):
+
+class VideoPage(BasePage):
     def __init__(self):
         super().__init__()
 
@@ -33,23 +33,7 @@ class YouTubePage(QWidget):
         self.download_dir = str(Path.home() / "Downloads")
 
     def _init_ui(self):
-        layout = QVBoxLayout(self)
-        layout.setSpacing(15)
-        layout.setContentsMargins(25, 25, 25, 25)
-
-        # Application title
-
-        title_label = QLabel("YouTube Downloader")
-        title_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        title_label.setStyleSheet("""
-            font-size: 24px;
-            font-weight: bold;
-        """)
-
-        layout.addWidget(title_label)
-
         # URL section
-
         url_group = QGroupBox("Відео")
         url_layout = QVBoxLayout(url_group)
 
@@ -68,7 +52,7 @@ class YouTubePage(QWidget):
 
         url_layout.addWidget(self.load_button)
 
-        layout.addWidget(url_group)
+        self.content_layout.addWidget(url_group)
 
         # Quality section
 
@@ -97,7 +81,7 @@ class YouTubePage(QWidget):
 
         quality_layout.addLayout(folder_layout)
 
-        layout.addWidget(quality_group)
+        self.content_layout.addWidget(quality_group)
 
         # Progress section
 
@@ -119,7 +103,7 @@ class YouTubePage(QWidget):
         progress_layout.addWidget(self.eta_label)
         progress_layout.addWidget(self.status_label)
 
-        layout.addWidget(progress_group)
+        self.content_layout.addWidget(progress_group)
 
         # Action buttons
 
@@ -134,7 +118,7 @@ class YouTubePage(QWidget):
         buttons_layout.addWidget(self.download_button)
         buttons_layout.addWidget(self.cancel_button)
 
-        layout.addLayout(buttons_layout)
+        self.content_layout.addLayout(buttons_layout)
 
     def _init_events(self):
         self.load_button.clicked.connect(self.load_video_info)

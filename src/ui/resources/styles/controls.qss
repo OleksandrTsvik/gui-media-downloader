@@ -1,0 +1,33 @@
+/* ===== QLineEdit, QComboBox ===== */
+QLineEdit,
+QComboBox {
+  border: 1px solid #332a42;
+  border-radius: 5px;
+  background-color: #211b2d;
+  padding: 8px;
+  color: #f4f0fa;
+}
+
+/* ===== QComboBox ===== */
+QComboBox QListView {
+  border: 1px solid #332a42;
+  border-radius: 5px;
+  background-color: #211B2D;
+}
+
+QComboBox QAbstractItemView {
+  outline: 0px;
+}
+
+QComboBox QListView::item {
+  padding: 4px 3px;
+  color: #F4F0FA;
+}
+
+QComboBox QListView::item:selected {
+  background-color: #8B5CF6;
+}
+
+QComboBox QListView::item:hover {
+  background-color: #A78BFA;
+}

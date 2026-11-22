@@ -1,7 +1,9 @@
-QMainWindow {
-  background-color: #0d0b14;
+/* ===== QLabel ===== */
+QLabel {
+  color: #f4f0fa;
 }
 
+/* ===== QGroupBox ===== */
 QGroupBox {
   margin-top: 10px;
   border: 1px solid #332a42;
@@ -18,14 +20,7 @@ QGroupBox::title {
   subcontrol-origin: margin;
 }
 
-QLineEdit, QComboBox {
-  border: 1px solid #332a42;
-  border-radius: 5px;
-  background-color: #211b2d;
-  padding: 8px;
-  color: #f4f0fa;
-}
-
+/* ===== QPushButton ===== */
 QPushButton {
   border: none;
   border-radius: 5px;
@@ -44,6 +39,7 @@ QPushButton:disabled {
   color: #71677f;
 }
 
+/* ===== QProgressBar ===== */
 QProgressBar {
   border: 1px solid #332a42;
   border-radius: 5px;
@@ -56,12 +52,4 @@ QProgressBar {
 QProgressBar::chunk {
   border-radius: 4px;
   background-color: #22d3ee;
-}
-
-QLabel {
-  color: #f4f0fa;
-}
-
-QMessageBox QLabel {
-  color: #0D0B14;
 }
