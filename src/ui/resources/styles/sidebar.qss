@@ -1,0 +1,42 @@
+#sidebar {
+    border-right: 1px solid #332A42;
+    background-color: #171320;
+}
+
+#sidebar__toggle-button {
+    border: none;
+    border-radius: 6px;
+    background-color: #332A42;
+    padding: 8px;
+    font-size: 14px;
+}
+
+#sidebar__toggle-button:hover {
+    background-color: #71677F;
+}
+
+#sidebar__title {
+    padding: 0;
+    color: #F4F0FA;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#sidebar__nav-button {
+    border: none;
+    background-color: transparent;
+    padding: 12px 12px 12px 14px;
+    color: #a49aaf;
+    font-size: 14px;
+    text-align: left;
+}
+
+#sidebar__nav-button:hover {
+    background-color: #332A42;
+    color: #F4F0FA;
+}
+
+#sidebar__nav-button:checked {
+    background-color: #8B5CF6;
+    color: #F4F0FA;
+}

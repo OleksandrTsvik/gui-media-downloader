@@ -41,6 +41,8 @@ source .venv/Scripts/activate    # bash
 - [Python Debugger](https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy)
 - [Qt for Python](https://marketplace.visualstudio.com/items?itemName=seanwu.vscode-qt-for-python)
 - [Ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff)
+- [Sort CSS](https://marketplace.visualstudio.com/items?itemName=piyushsarkar.sort-css-properties)
+- [Terminals Manager](https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-terminals)
 
 ## ⚙️ .vscode
 
@@ -50,6 +52,9 @@ source .venv/Scripts/activate    # bash
 {
   "search.exclude": {
     "**/.venv": true
+  },
+  "workbench.editorAssociations": {
+    "*.svg": "default"
   },
   "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
   "python.terminal.activateEnvironment": true,
@@ -76,7 +81,36 @@ source .venv/Scripts/activate    # bash
     "format": {
       "quote-style": "double"
     }
-  }
+  },
+  "sortcss.sortingStrategy": "concentric-css"
+}
+```
+
+### terminals.json
+
+- [Terminals Manager](https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-terminals)
+- [Integrated Terminal colors](https://code.visualstudio.com/api/references/theme-color?color-formats#integrated-terminal-colors)
+
+```json
+{
+  "autorun": true,
+  "autokill": true,
+  "terminals": [
+    {
+      "name": "app",
+      "icon": "terminal",
+      "color": "terminal.ansiMagenta",
+      "commands": ["source .venv/Scripts/activate", "python src/main.py"],
+      "execute": true,
+      "shellPath": "C:\\Program Files\\Git\\bin\\bash.exe"
+    },
+    {
+      "name": "root",
+      "icon": "file-directory",
+      "color": "terminal.ansiGreen",
+      "shellPath": "C:\\Program Files\\Git\\bin\\bash.exe"
+    }
+  ]
 }
 ```
 
